@@ -1,0 +1,97 @@
+<div class="container">
+  <section class="button">
+    <div>
+      <h2>Material Button Component</h2>
+      <br>
+    </div>
+
+    <section>
+      <div class="example-label">Basic</div>
+      <div class="example-button-row">
+        <button mat-button>Basic</button>
+        <button mat-button color="primary">Primary</button>
+        <button mat-button color="accent">Accent</button>
+        <button mat-button color="warn">Warn</button>
+        <button mat-button disabled>Disabled</button>
+        <a mat-button href="https://www.google.com/" target="_blank">Link</a>
+      </div>
+    </section>
+    <section>
+      <div class="example-label">Raised</div>
+      <div class="example-button-row">
+        <button mat-raised-button>Basic</button>
+        <button class="btn btn-sm btn-success" mat-raised-button>Primary</button>
+        <button mat-raised-button color="accent">Accent</button>
+        <button mat-raised-button color="warn">Warn</button>
+        <button mat-raised-button disabled>Disabled</button>
+        <a mat-raised-button href="https://www.google.com/" target="_blank">Link</a>
+      </div>
+    </section>
+    <section>
+      <div class="example-label">Stroked</div>
+      <div class="example-button-row">
+        <button mat-stroked-button>Basic</button>
+        <button mat-stroked-button color="primary">Primary</button>
+        <button mat-stroked-button color="accent">Accent</button>
+        <button mat-stroked-button color="warn">Warn</button>
+        <button mat-stroked-button disabled>Disabled</button>
+        <a mat-stroked-button href="https://www.google.com/" target="_blank">Link</a>
+      </div>
+    </section>
+    <section>
+      <div class="example-label">Flat</div>
+      <div class="example-button-row">
+        <button mat-flat-button>Basic</button>
+        <button mat-flat-button color="primary">Primary</button>
+        <button mat-flat-button color="accent">Accent</button>
+        <button mat-flat-button color="warn">Warn</button>
+        <button mat-flat-button disabled>Disabled</button>
+        <a mat-flat-button href="https://www.google.com/" target="_blank">Link</a>
+      </div>
+    </section>
+  </section>
+
+  <br>
+
+  <section class="typography">
+    <div>
+      <h2>Material Typography</h2>
+      <br>
+    </div>
+  </section>
+
+  <div class="mat-display-4">display 4</div>
+  <div class="mat-display-3">display 3</div>
+  <div class="mat-display-2">display 2</div>
+  <div class="mat-display-1">display 1</div>
+  <div>
+    <span class="material-icons">
+      done_outline
+    </span>
+  </div>
+  <br>
+
+
+  <ng-template *ngIf="notifications==0;then showBlock; else notShowBlock">
+  </ng-template>
+
+  <ng-template #showBlock>
+    <div>
+      <span [matBadge]=notifications matBadgeOverlap="false" [matBadgeHidden]="!visible">Notifications</span>
+    </div>
+  </ng-template>
+
+  <ng-template #notShowBlock>
+    <div>
+      <span [matBadge]=notifications matBadgeOverlap="false">Notifications</span>
+    </div>
+  </ng-template>
+
+  <br>
+
+  <br>
+  <div>
+    <span [matBadge]=notifications matBadgeOverlap="false" [matBadgeHidden]=" notifications===0 ">Notifications</span>
+  </div>
+
+</div>

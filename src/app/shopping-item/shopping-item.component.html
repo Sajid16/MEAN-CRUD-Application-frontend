@@ -1,0 +1,66 @@
+<br>
+<div class="container">
+
+    <form #frm="ngForm" (ngSubmit)="addItems(frm)" *ngIf="!toggleForm">
+        <h2>Add Item</h2>
+        <div class="form-group">
+            <label for="">Name: </label>
+            <input type="text" class="form-control" name="itemName" value="" ngModel>
+        </div>
+        <div class="form-group">
+            <label for="">Quantity: </label>
+            <input type="number" class="form-control" name="itemQuantity" value="" ngModel>
+        </div>
+        <div>
+            <button class="btn btn-sm btn-success" mat-raised-button type="submit">Add Item</button>
+        </div>
+    </form>
+
+    <form #editfrm="ngForm" (ngSubmit)="editItems(editfrm)" *ngIf="toggleForm">
+        <h2>Edit Item</h2>
+        <div class="form-group">
+            <label for="">Name: </label>
+            <input type="text" class="form-control" name="itemName" value="" [ngModel]="selectedItem.itemName">
+        </div>
+        <div class="form-group">
+            <label for="">Quantity: </label>
+            <input type="number" class="form-control" name="itemQuantity" value=""
+                [ngModel]="selectedItem.itemQuantity">
+        </div>
+        <div>
+            <button class="btn btn-sm btn-success" mat-raised-button type="submit">Save</button>
+        </div>
+    </form>
+
+    <br><br>
+
+    <h2>Shopping List</h2>
+
+    <div id="print-section">
+        <div class="row">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">Item Name</th>
+                        <th scope="col">Quantity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of shoppingItemList">
+                        <td><input type="checkbox" name=""></td>
+                        <td>{{item.itemName}}</td>
+                        <td>{{item.itemQuantity}}</td>
+                        <td><button class="btn btn-sm btn-primary" type="button" name="edit"
+                                (click)="showEditForm(item)" [disabled]="toggleForm">Edit</button></td>
+                        <td><button class="btn btn-sm btn-danger" type="button" name="edit"
+                                (click)="deleteItem(item._id)">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <button class="btn btn-sm btn-info" printSectionId="print-section" mat-raised-button ngxPrint>Print data table</button>
+    <br><br>
+
+</div>
