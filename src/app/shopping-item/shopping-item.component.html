@@ -16,6 +16,24 @@
         </div>
     </form>
 
+    <br><br>
+
+
+
+    <!-- trialing how to pass array to child component -->
+
+    <div *ngIf="shoppingItemList.length > 0">
+      <p>{{shoppingItemList}}</p>
+      <app-child-component [childshoppingItemList]="shoppingItemList"></app-child-component>
+    </div>
+    <div *ngIf="shoppingItemList.length === 0">
+      <p>NO Record Found</p>
+    </div>
+
+    <!-- end -->
+
+
+
     <form #editfrm="ngForm" (ngSubmit)="editItems(editfrm)" *ngIf="toggleForm">
         <h2>Edit Item</h2>
         <div class="form-group">

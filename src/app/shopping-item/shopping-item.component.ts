@@ -29,7 +29,7 @@ export class ShoppingItemComponent implements OnInit {
 
 
 
-  // get data from client form and send it to data service class(addShoppingItem) function and in return 
+  // get data from client form and send it to data service class(addShoppingItem) function and in return
   // get a message as json if it is successful
   addItems(frm) {
     // console.log(frm.value);
@@ -38,6 +38,7 @@ export class ShoppingItemComponent implements OnInit {
       itemQuantity: frm.value.itemQuantity,
       itemBought: false
     }
+    console.log("output of newItem variable: "+newItem);
     this.dataService.addShoppingItem(newItem)
       .subscribe(item => {
         console.log(item);
@@ -46,7 +47,7 @@ export class ShoppingItemComponent implements OnInit {
   }
 
 
-  // call delete function with id to delete from backend 
+  // call delete function with id to delete from backend
   deleteItem(id) {
     this.dataService.deleteShoppingItem(id)
       .subscribe(data => {
@@ -78,7 +79,7 @@ export class ShoppingItemComponent implements OnInit {
         itemQuantity: editfrm.value.itemQuantity,
         itemBought: editfrm.value.itemBought
       }
-      console.log()
+      console.log();
       this.dataService.updateShoppingItem(updateItem)
         .subscribe(result => {
           // console.log("value of result is: "+result);

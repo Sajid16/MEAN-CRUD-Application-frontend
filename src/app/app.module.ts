@@ -13,18 +13,26 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // import sharable material module
 import { MaterialModule } from './material/material.module';
+import { ChildComponentComponent } from './child-component/child-component.component';
+import { MaterialDataTableComponent } from './material-data-table/material-data-table.component';
+import { DataTableComponent } from './data-table/data-table.component';
 
-const ROUTES: Routes =[
+
+const ROUTES: Routes = [
   {path: '', component: ShoppingItemComponent},
   {path: 'material', component: AngularMaterialPracticeComponent},
-]
+  {path: 'material-dataTable', component: MaterialDataTableComponent},
+  {path: 'material-dataTable-2', component: DataTableComponent},
+];
 
 @NgModule({
   declarations: [
     AppComponent,
     ShoppingItemComponent,
     AngularMaterialPracticeComponent,
-    
+    ChildComponentComponent,
+    MaterialDataTableComponent,
+    DataTableComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +42,7 @@ const ROUTES: Routes =[
     NgxPrintModule,
     RouterModule.forRoot(ROUTES),
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
