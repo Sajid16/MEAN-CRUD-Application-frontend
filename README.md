@@ -28,10 +28,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 ## TASKS THIS PROJECT CONTAINS:
- CRUD\n
- Angular Material
- API integration
- child componenet 
- data passing to child component
- update child data component on real time using ngOnChanges() function
- Angular Material Data Table
+ 1.CRUD
+ 2.Angular Material
+ 3.API integration
+ 4.child componenet 
+ 5.data passing to child component
+ 6.update child data component on real time using ngOnChanges() function
+ 7.Angular Material Data Table
