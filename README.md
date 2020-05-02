@@ -25,3 +25,13 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+## TASKS THIS PROJECT CONTAINS:
+ 1.CRUD
+ 2.Angular Material
+ 3.API integration
+ 4.child componenet 
+ 5.data passing to child component
+ 6.update child data component on real time using ngOnChanges() function
+ 7.Angular Material Data Table
