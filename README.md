@@ -28,7 +28,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 ## TASKS THIS PROJECT CONTAINS:
- CRUD
+ CRUD\n
  Angular Material
  API integration
  child componenet 
