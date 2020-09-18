@@ -28,12 +28,20 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## TASKS THIS PROJECT CONTAINS:
 
-1.CRUD.
-2.Angular Material.
-3.API integration.
-4.child componenet.
-5.data passing to child component.
-6.update child data component on real time using ngOnChanges() function.
-7.Angular Material Data Table.
-8.Dynamically add and delete row and save value into a dynamic array.
-link1: https://www.thecodehubs.com/dynamically-add-and-remove-row-in-angular-7/ .
+## 1.CRUD.
+
+## 2.Angular Material.
+
+## 3.API integration.
+
+## 4.child componenet.
+
+## 5.data passing to child component.
+
+## 6.update child data component on real time using ngOnChanges() function.
+
+## 7.Angular Material Data Table.
+
+## 8.Dynamically add and delete row and save value into a dynamic array.
+
+(link1: https://www.thecodehubs.com/dynamically-add-and-remove-row-in-angular-7/) .

@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ToastrModule } from 'ngx-toastr';
 import { HttpClientModule } from '@angular/common/http';
 // import { FormsModule } from '@angular/forms';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -18,15 +19,16 @@ import { ChildComponentComponent } from './child-component/child-component.compo
 import { MaterialDataTableComponent } from './material-data-table/material-data-table.component';
 import { DataTableComponent } from './data-table/data-table.component';
 import { GridViewComponent } from './grid-view/grid-view.component';
-import { ToastrModule } from 'ngx-toastr';
+import { ContactComponent } from './contact/contact.component';
 
 
 const ROUTES: Routes = [
-  { path: '', component: ShoppingItemComponent },
+  { path: 'CRUD', component: ShoppingItemComponent },
   { path: 'material', component: AngularMaterialPracticeComponent },
   { path: 'material-dataTable', component: MaterialDataTableComponent },
   { path: 'material-dataTable-2', component: DataTableComponent },
   { path: 'grid-view', component: GridViewComponent },
+  { path: 'reactive-form', component: ContactComponent },
 ];
 
 @NgModule({
@@ -38,6 +40,7 @@ const ROUTES: Routes = [
     MaterialDataTableComponent,
     DataTableComponent,
     GridViewComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,7 +52,7 @@ const ROUTES: Routes = [
     RouterModule.forRoot(ROUTES),
     BrowserAnimationsModule,
     MaterialModule,
-    ToastrModule.forRoot(ROUTES)
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

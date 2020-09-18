@@ -9,6 +9,7 @@ import { DynamicGrid } from '../grid.model';
 })
 export class GridViewComponent implements OnInit {
 
+  // constructor(private toastr: ToastrService) { }
   constructor() { }
 
   dynamicArray: Array<DynamicGrid> = [];
@@ -29,11 +30,12 @@ export class GridViewComponent implements OnInit {
 
   deleteRow(index) {
     if (this.dynamicArray.length == 1) {
-      this.toastr.error('Can\'t delete the row when there is only one row', 'Warning');
+      // this.toastr.error('Can\'t delete the row when there is only one row', 'Warning');
       return false;
     } else {
       this.dynamicArray.splice(index, 1);
-      this.toastr.warning('Row deleted successfully', 'Delete row');
+      // this.toastr.warning('Row deleted successfully', 'Delete row');
+      console.log(this.dynamicArray);
       return true;
     }
   }
