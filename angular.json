@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "crudFrontend"
+  "defaultProject": "crudFrontend",
+  "cli": {
+    "analytics": "d38da200-ea18-4cb1-8253-fabab4064e13"
+  }
 }
