@@ -12,12 +12,12 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/cli": "~8.0.0",
-    "@angular/compiler-cli": "~8.0.0",
     "@angular/animations": "^8.0.3",
     "@angular/cdk": "~8.2.3",
+    "@angular/cli": "^10.1.2",
     "@angular/common": "~8.0.0",
     "@angular/compiler": "~8.0.0",
+    "@angular/compiler-cli": "^8.0.3",
     "@angular/core": "~8.0.0",
     "@angular/forms": "~8.0.0",
     "@angular/material": "8.2.3",
@@ -29,20 +29,22 @@
     "hammerjs": "^2.0.8",
     "ngx-print": "^1.2.0-beta.4",
     "ngx-toastr": "^13.0.0",
+    "path": "^0.12.7",
     "rxjs": "~6.4.0",
     "tslib": "^1.9.0",
-    "zone.js": "~0.9.1",
-    "typescript": "~3.4.3"
+    "typescript": "~3.4.3",
+    "zone.js": "~0.9.1"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.800.0",
-    "@angular/cli": "~8.0.0",
-    "@angular/compiler-cli": "~8.0.0",
+    "@angular/cli": "^10.1.2",
+    "@angular/compiler-cli": "^8.0.3",
     "@angular/language-service": "~8.0.0",
     "@types/jasmine": "~3.3.8",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
     "codelyzer": "^5.0.0",
+    "enhanced-resolve": "^3.3.0",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.1.0",
@@ -56,7 +58,7 @@
     "typescript": "~3.4.3"
   },
   "engines": {
-    "node": "~10.19.0",
-    "npm": "~6.14.4"
+    "node": "10.19.0",
+    "npm": "6.14.4"
   }
 }
