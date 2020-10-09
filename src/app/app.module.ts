@@ -20,6 +20,18 @@ import { MaterialDataTableComponent } from './material-data-table/material-data-
 import { DataTableComponent } from './data-table/data-table.component';
 import { GridViewComponent } from './grid-view/grid-view.component';
 import { ContactComponent } from './contact/contact.component';
+import { FormsComponent } from './forms/forms.component';
+
+// material modules
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {
+  MatButtonModule,
+  MatCheckboxModule,
+  MatInputModule,
+  MatSelectModule,
+  MatDatepickerModule,
+  MatNativeDateModule
+ } from '@angular/material';
 
 
 const ROUTES: Routes = [
@@ -29,6 +41,7 @@ const ROUTES: Routes = [
   { path: 'material-dataTable-2', component: DataTableComponent },
   { path: 'grid-view', component: GridViewComponent },
   { path: 'reactive-form', component: ContactComponent },
+  { path: 'forms', component: FormsComponent },
 ];
 
 @NgModule({
@@ -41,6 +54,7 @@ const ROUTES: Routes = [
     DataTableComponent,
     GridViewComponent,
     ContactComponent,
+    FormsComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,6 +67,13 @@ const ROUTES: Routes = [
     BrowserAnimationsModule,
     MaterialModule,
     ToastrModule.forRoot(),
+    MatButtonModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatCheckboxModule,
+    MatSelectModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]
