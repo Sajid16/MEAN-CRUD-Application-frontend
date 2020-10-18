@@ -33,6 +33,10 @@ import {
   MatNativeDateModule
  } from '@angular/material';
 
+// custom module
+import { TodoModule } from './todo/todo.module';
+import { TasksComponent } from './tasks/tasks.component';
+
 
 const ROUTES: Routes = [
   { path: 'CRUD', component: ShoppingItemComponent },
@@ -55,8 +59,12 @@ const ROUTES: Routes = [
     GridViewComponent,
     ContactComponent,
     FormsComponent,
+    TasksComponent,
   ],
   imports: [
+    // importing custom module into app.module.ts
+    TodoModule,
+    /////////////////////////////////////////////
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,

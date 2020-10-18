@@ -44,4 +44,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## 8.Dynamically add and delete row and save value into a dynamic array.
 
-(link1: https://www.thecodehubs.com/dynamically-add-and-remove-row-in-angular-7/) .
+    * (link1: https://www.thecodehubs.com/dynamically-add-and-remove-row-in-angular-7/) .
+
+## full angular 9 tutorial
+    * link: https://www.youtube.com/playlist?list=PLp50dWW_m40WYX5tynzpPf0a3ZgjGT1bI
