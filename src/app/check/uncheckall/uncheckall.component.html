@@ -1,0 +1,25 @@
+<h1>Check UnCheck All Checkbox Angular</h1>
+<div class="container">
+  <div class="text-center mt-5">
+    <div class="row">
+      <div class="col-md-6">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <input type="checkbox" [(ngModel)]="isMasterSel" name="list_name" value="h1" (change)="checkUncheckAll()" />
+            <strong>Select All / Unselect All</strong>
+          </li>
+        </ul>
+        <ul class="list-group">
+          <li class="list-group-item" *ngFor="let item of categoryList">
+            <input type="checkbox" [(ngModel)]="item.isSelected" name="list_name" value="{{item.id}}"
+              (change)="isAllSelected()" />
+            {{item.value}}
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <code>{{checkedCategoryList}}</code>
+      </div>
+    </div>
+  </div>
+</div>

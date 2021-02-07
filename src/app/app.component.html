@@ -10,15 +10,15 @@
       <li class="nav-item">
         <a class="nav-link" routerLink="/CRUD">CRUD-Application</a>
       </li>
-      <!-- <li class="nav-item">
-        <a class="nav-link" routerLink="/material">Material-Practice</a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          More Tasks
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="nav-link" routerLink="/check-uncheck-all">check-uncheck-all</a>
+        </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/material-dataTable">Material-Data-Table</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/material-dataTable-2">Material-Data-Table-2</a>
-      </li> -->
       <li class="nav-item">
         <a class="nav-link" routerLink="/grid-view">Grid-view</a>
       </li>
@@ -38,7 +38,5 @@
   </p>
 </ng-template>
 
-<app-tasks></app-tasks>
-<app-completed-tasks></app-completed-tasks>
 
 <router-outlet></router-outlet>

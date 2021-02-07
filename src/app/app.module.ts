@@ -36,6 +36,7 @@ import {
 // custom module
 import { TodoModule } from './todo/todo.module';
 import { TasksComponent } from './tasks/tasks.component';
+import { UncheckallComponent } from './check/uncheckall/uncheckall.component';
 
 
 const ROUTES: Routes = [
@@ -46,6 +47,7 @@ const ROUTES: Routes = [
   { path: 'grid-view', component: GridViewComponent },
   { path: 'reactive-form', component: ContactComponent },
   { path: 'forms', component: FormsComponent },
+  { path: 'check-uncheck-all', component: UncheckallComponent },
 ];
 
 @NgModule({
@@ -60,6 +62,7 @@ const ROUTES: Routes = [
     ContactComponent,
     FormsComponent,
     TasksComponent,
+    UncheckallComponent,
   ],
   imports: [
     // importing custom module into app.module.ts
