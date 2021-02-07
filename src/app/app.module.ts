@@ -37,6 +37,9 @@ import {
 import { TodoModule } from './todo/todo.module';
 import { TasksComponent } from './tasks/tasks.component';
 import { UncheckallComponent } from './check/uncheckall/uncheckall.component';
+import { FormUploadComponent } from './upload/form-upload/form-upload.component';
+import { ListUploadComponent } from './upload/list-upload/list-upload.component';
+import { DetailsUploadComponent } from './upload/details-upload/details-upload.component';
 
 
 const ROUTES: Routes = [
@@ -63,6 +66,9 @@ const ROUTES: Routes = [
     FormsComponent,
     TasksComponent,
     UncheckallComponent,
+    FormUploadComponent,
+    ListUploadComponent,
+    DetailsUploadComponent,
   ],
   imports: [
     // importing custom module into app.module.ts
