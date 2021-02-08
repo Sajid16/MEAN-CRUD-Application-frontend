@@ -43,6 +43,7 @@ import { DetailsUploadComponent } from './upload/details-upload/details-upload.c
 
 
 const ROUTES: Routes = [
+  // { path: '', component: AppComponent},
   { path: 'CRUD', component: ShoppingItemComponent },
   { path: 'material', component: AngularMaterialPracticeComponent },
   { path: 'material-dataTable', component: MaterialDataTableComponent },
@@ -51,6 +52,7 @@ const ROUTES: Routes = [
   { path: 'reactive-form', component: ContactComponent },
   { path: 'forms', component: FormsComponent },
   { path: 'check-uncheck-all', component: UncheckallComponent },
+  { path: 'search', component: UncheckallComponent },
 ];
 
 @NgModule({

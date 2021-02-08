@@ -7,9 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'crudFrontend';
-  value: number;
 
   ngOnInit() {
-    this.value = 1;
   }
 }

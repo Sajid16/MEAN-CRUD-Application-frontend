@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-uncheckall',
@@ -12,7 +13,15 @@ export class UncheckallComponent implements OnInit {
   categoryList:any;
   checkedCategoryList:any;
 
-  constructor() { 
+  constructor(private activatedRoute: ActivatedRoute) { 
+
+    // query param
+    this.activatedRoute.queryParams.subscribe(data =>{
+      console.log(data);
+      
+    });
+    // query param
+
     this.isMasterSel = false;
   
       this.categoryList = [
