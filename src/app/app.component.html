@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark" *ngIf="value==1; else admin">
-  <a class="navbar-brand" routerLink="/">Angular-CRUD-Application</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" routerLink="/">Angular-Application</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -10,15 +10,18 @@
       <li class="nav-item">
         <a class="nav-link" routerLink="/CRUD">CRUD-Application</a>
       </li>
-      <!-- <li class="nav-item">
-        <a class="nav-link" routerLink="/material">Material-Practice</a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="/check-uncheck-all">check-uncheck-all</a>
+          <a class="dropdown-item" [routerLink]="['/search']" [queryParams]="{name:'sajid', id:'000292'}">
+            Search using query params
+          </a>
+        </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/material-dataTable">Material-Data-Table</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/material-dataTable-2">Material-Data-Table-2</a>
-      </li> -->
       <li class="nav-item">
         <a class="nav-link" routerLink="/grid-view">Grid-view</a>
       </li>
@@ -35,11 +38,21 @@
   </div>
 </nav>
 
-<ng-template #admin>
-  <p>
-    an admin
-  </p>
-</ng-template>
+<!-- file upload practice codes -->
+
+<div class="container" style="width:400px">
+  <!-- <div style="color: blue; margin-bottom: 20px">
+    <h1>{{title}}</h1>
+    <h3>{{description}}</h3>
+  </div> -->
+
+  <app-form-upload></app-form-upload>
+
+  <br />
+  <br />
+
+  <app-list-upload></app-list-upload>
+</div>
 
 <!-- <app-tasks></app-tasks>
 <app-completed-tasks></app-completed-tasks> -->

@@ -37,11 +37,14 @@ import {
 // custom module
 import { TodoModule } from './todo/todo.module';
 import { TasksComponent } from './tasks/tasks.component';
-import { RegisterUserComponent } from './register-user/register-user.component';
-import { PopupComponent } from './popup/popup.component';
-import { SigninComponent } from './signin/signin.component';
+import { UncheckallComponent } from './check/uncheckall/uncheckall.component';
+import { FormUploadComponent } from './upload/form-upload/form-upload.component';
+import { ListUploadComponent } from './upload/list-upload/list-upload.component';
+import { DetailsUploadComponent } from './upload/details-upload/details-upload.component';
+
 
 const ROUTES: Routes = [
+  // { path: '', component: AppComponent},
   { path: 'CRUD', component: ShoppingItemComponent },
   { path: 'material', component: AngularMaterialPracticeComponent },
   { path: 'material-dataTable', component: MaterialDataTableComponent },
@@ -49,9 +52,8 @@ const ROUTES: Routes = [
   { path: 'grid-view', component: GridViewComponent },
   { path: 'reactive-form', component: ContactComponent },
   { path: 'forms', component: FormsComponent },
-  { path: 'register-user', component: RegisterUserComponent },
-  { path: 'signin', component: SigninComponent },
-
+  { path: 'check-uncheck-all', component: UncheckallComponent },
+  { path: 'search', component: UncheckallComponent },
 ];
 
 @NgModule({
@@ -66,9 +68,10 @@ const ROUTES: Routes = [
     ContactComponent,
     FormsComponent,
     TasksComponent,
-    RegisterUserComponent,
-    PopupComponent,
-    SigninComponent,
+    UncheckallComponent,
+    FormUploadComponent,
+    ListUploadComponent,
+    DetailsUploadComponent,
   ],
   imports: [
     BrowserModule,
