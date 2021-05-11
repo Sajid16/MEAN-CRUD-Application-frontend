@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Item } from '../item';
 import { DataService } from '../data.service';
+import { MatDialog } from '@angular/material/dialog';
+import { PopupComponent } from '../popup/popup.component';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-shopping-item',
@@ -13,8 +16,12 @@ export class ShoppingItemComponent implements OnInit {
   selectedItem: Item;
   toggleForm: boolean = false;
 
+  // try ngStyle
+  colorVal = 'yellow';
+  backColVal = 'black';
 
-  constructor(private dataService: DataService) { }
+
+  constructor(private dataService: DataService, public dialog: MatDialog) { }
 
 
   // this function will get all the data from data service class
@@ -38,7 +45,7 @@ export class ShoppingItemComponent implements OnInit {
       itemQuantity: frm.value.itemQuantity,
       itemBought: false
     }
-    console.log("output of newItem variable: "+newItem);
+    console.log("output of newItem variable: " + newItem);
     this.dataService.addShoppingItem(newItem)
       .subscribe(item => {
         console.log(item);
@@ -95,6 +102,14 @@ export class ShoppingItemComponent implements OnInit {
   showEditForm(editfrm) {
     this.toggleForm = !this.toggleForm;
     this.selectedItem = editfrm;
+  }
+
+  openDialog() {
+    const dialogRef = this.dialog.open(PopupComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
   }
 
   ngOnInit() {

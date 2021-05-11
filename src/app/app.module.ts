@@ -2,8 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ToastrModule } from 'ngx-toastr';
 import { HttpClientModule } from '@angular/common/http';
-// import { FormsModule } from '@angular/forms';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { NgxPrintModule } from 'ngx-print';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -23,20 +23,23 @@ import { ContactComponent } from './contact/contact.component';
 import { FormsComponent } from './forms/forms.component';
 
 // material modules
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import {
   MatButtonModule,
   MatCheckboxModule,
   MatInputModule,
   MatSelectModule,
   MatDatepickerModule,
-  MatNativeDateModule
- } from '@angular/material';
+  MatNativeDateModule,
+  MatDialogModule
+} from '@angular/material';
 
 // custom module
 import { TodoModule } from './todo/todo.module';
 import { TasksComponent } from './tasks/tasks.component';
-
+import { RegisterUserComponent } from './register-user/register-user.component';
+import { PopupComponent } from './popup/popup.component';
+import { SigninComponent } from './signin/signin.component';
 
 const ROUTES: Routes = [
   { path: 'CRUD', component: ShoppingItemComponent },
@@ -46,6 +49,9 @@ const ROUTES: Routes = [
   { path: 'grid-view', component: GridViewComponent },
   { path: 'reactive-form', component: ContactComponent },
   { path: 'forms', component: FormsComponent },
+  { path: 'register-user', component: RegisterUserComponent },
+  { path: 'signin', component: SigninComponent },
+
 ];
 
 @NgModule({
@@ -60,16 +66,16 @@ const ROUTES: Routes = [
     ContactComponent,
     FormsComponent,
     TasksComponent,
+    RegisterUserComponent,
+    PopupComponent,
+    SigninComponent,
   ],
   imports: [
-    // importing custom module into app.module.ts
-    TodoModule,
-    /////////////////////////////////////////////
     BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    AppRoutingModule,
+    HttpClientModule,
     NgxPrintModule,
     RouterModule.forRoot(ROUTES),
     BrowserAnimationsModule,
@@ -81,7 +87,8 @@ const ROUTES: Routes = [
     MatNativeDateModule,
     MatCheckboxModule,
     MatSelectModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

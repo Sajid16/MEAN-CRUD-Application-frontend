@@ -53,6 +53,12 @@ export class DataService {
   }
 
 
+  // register user
+  // registrUser(userData): Observable<any> {
+  //   return this.http.post('http://127.0.0.1:8000/api/register/users/', userData);
+  // }
+
+
 
   // Handle Errors 
   error(error: HttpErrorResponse) {
